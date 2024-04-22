@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B1A53042BD6C13100E469DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A53032BD6C13100E469DA /* AppDelegate.swift */; };
+		2B1A53062BD6C13100E469DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A53052BD6C13100E469DA /* SceneDelegate.swift */; };
+		2B1A53082BD6C13100E469DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A53072BD6C13100E469DA /* ViewController.swift */; };
+		2B1A530B2BD6C13100E469DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A53092BD6C13100E469DA /* Main.storyboard */; };
+		2B1A530D2BD6C13600E469DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A530C2BD6C13600E469DA /* Assets.xcassets */; };
+		2B1A53102BD6C13600E469DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A530E2BD6C13600E469DA /* LaunchScreen.storyboard */; };
+		2B1A531B2BD6C13700E469DA /* KooraLiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A531A2BD6C13700E469DA /* KooraLiveTests.swift */; };
+		2B1A53252BD6C13700E469DA /* KooraLiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A53242BD6C13700E469DA /* KooraLiveUITests.swift */; };
+		2B1A53272BD6C13700E469DA /* KooraLiveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A53262BD6C13700E469DA /* KooraLiveUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B1A53172BD6C13600E469DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B1A52F82BD6C13000E469DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B1A52FF2BD6C13100E469DA;
+			remoteInfo = KooraLive;
+		};
+		2B1A53212BD6C13700E469DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B1A52F82BD6C13000E469DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B1A52FF2BD6C13100E469DA;
+			remoteInfo = KooraLive;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B1A53002BD6C13100E469DA /* KooraLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KooraLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B1A53032BD6C13100E469DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B1A53052BD6C13100E469DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2B1A53072BD6C13100E469DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B1A530A2BD6C13100E469DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B1A530C2BD6C13600E469DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B1A530F2BD6C13600E469DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B1A53112BD6C13600E469DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B1A53162BD6C13600E469DA /* KooraLiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KooraLiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B1A531A2BD6C13700E469DA /* KooraLiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KooraLiveTests.swift; sourceTree = "<group>"; };
+		2B1A53202BD6C13700E469DA /* KooraLiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KooraLiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B1A53242BD6C13700E469DA /* KooraLiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KooraLiveUITests.swift; sourceTree = "<group>"; };
+		2B1A53262BD6C13700E469DA /* KooraLiveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KooraLiveUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B1A52FD2BD6C13100E469DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B1A53132BD6C13600E469DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B1A531D2BD6C13700E469DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B1A52F72BD6C13000E469DA = {
+			isa = PBXGroup;
+			children = (
+				2B1A53022BD6C13100E469DA /* KooraLive */,
+				2B1A53192BD6C13700E469DA /* KooraLiveTests */,
+				2B1A53232BD6C13700E469DA /* KooraLiveUITests */,
+				2B1A53012BD6C13100E469DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B1A53012BD6C13100E469DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B1A53002BD6C13100E469DA /* KooraLive.app */,
+				2B1A53162BD6C13600E469DA /* KooraLiveTests.xctest */,
+				2B1A53202BD6C13700E469DA /* KooraLiveUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B1A53022BD6C13100E469DA /* KooraLive */ = {
+			isa = PBXGroup;
+			children = (
+				2B1A53032BD6C13100E469DA /* AppDelegate.swift */,
+				2B1A53052BD6C13100E469DA /* SceneDelegate.swift */,
+				2B1A53072BD6C13100E469DA /* ViewController.swift */,
+				2B1A53092BD6C13100E469DA /* Main.storyboard */,
+				2B1A530C2BD6C13600E469DA /* Assets.xcassets */,
+				2B1A530E2BD6C13600E469DA /* LaunchScreen.storyboard */,
+				2B1A53112BD6C13600E469DA /* Info.plist */,
+			);
+			path = KooraLive;
+			sourceTree = "<group>";
+		};
+		2B1A53192BD6C13700E469DA /* KooraLiveTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B1A531A2BD6C13700E469DA /* KooraLiveTests.swift */,
+			);
+			path = KooraLiveTests;
+			sourceTree = "<group>";
+		};
+		2B1A53232BD6C13700E469DA /* KooraLiveUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2B1A53242BD6C13700E469DA /* KooraLiveUITests.swift */,
+				2B1A53262BD6C13700E469DA /* KooraLiveUITestsLaunchTests.swift */,
+			);
+			path = KooraLiveUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B1A52FF2BD6C13100E469DA /* KooraLive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B1A532A2BD6C13700E469DA /* Build configuration list for PBXNativeTarget "KooraLive" */;
+			buildPhases = (
+				2B1A52FC2BD6C13100E469DA /* Sources */,
+				2B1A52FD2BD6C13100E469DA /* Frameworks */,
+				2B1A52FE2BD6C13100E469DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KooraLive;
+			productName = KooraLive;
+			productReference = 2B1A53002BD6C13100E469DA /* KooraLive.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B1A53152BD6C13600E469DA /* KooraLiveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B1A532D2BD6C13700E469DA /* Build configuration list for PBXNativeTarget "KooraLiveTests" */;
+			buildPhases = (
+				2B1A53122BD6C13600E469DA /* Sources */,
+				2B1A53132BD6C13600E469DA /* Frameworks */,
+				2B1A53142BD6C13600E469DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B1A53182BD6C13600E469DA /* PBXTargetDependency */,
+			);
+			name = KooraLiveTests;
+			productName = KooraLiveTests;
+			productReference = 2B1A53162BD6C13600E469DA /* KooraLiveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2B1A531F2BD6C13700E469DA /* KooraLiveUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B1A53302BD6C13700E469DA /* Build configuration list for PBXNativeTarget "KooraLiveUITests" */;
+			buildPhases = (
+				2B1A531C2BD6C13700E469DA /* Sources */,
+				2B1A531D2BD6C13700E469DA /* Frameworks */,
+				2B1A531E2BD6C13700E469DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B1A53222BD6C13700E469DA /* PBXTargetDependency */,
+			);
+			name = KooraLiveUITests;
+			productName = KooraLiveUITests;
+			productReference = 2B1A53202BD6C13700E469DA /* KooraLiveUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B1A52F82BD6C13000E469DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					2B1A52FF2BD6C13100E469DA = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					2B1A53152BD6C13600E469DA = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 2B1A52FF2BD6C13100E469DA;
+					};
+					2B1A531F2BD6C13700E469DA = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 2B1A52FF2BD6C13100E469DA;
+					};
+				};
+			};
+			buildConfigurationList = 2B1A52FB2BD6C13000E469DA /* Build configuration list for PBXProject "KooraLive" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B1A52F72BD6C13000E469DA;
+			productRefGroup = 2B1A53012BD6C13100E469DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B1A52FF2BD6C13100E469DA /* KooraLive */,
+				2B1A53152BD6C13600E469DA /* KooraLiveTests */,
+				2B1A531F2BD6C13700E469DA /* KooraLiveUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B1A52FE2BD6C13100E469DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B1A53102BD6C13600E469DA /* LaunchScreen.storyboard in Resources */,
+				2B1A530D2BD6C13600E469DA /* Assets.xcassets in Resources */,
+				2B1A530B2BD6C13100E469DA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B1A53142BD6C13600E469DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B1A531E2BD6C13700E469DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B1A52FC2BD6C13100E469DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B1A53082BD6C13100E469DA /* ViewController.swift in Sources */,
+				2B1A53042BD6C13100E469DA /* AppDelegate.swift in Sources */,
+				2B1A53062BD6C13100E469DA /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B1A53122BD6C13600E469DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B1A531B2BD6C13700E469DA /* KooraLiveTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B1A531C2BD6C13700E469DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B1A53252BD6C13700E469DA /* KooraLiveUITests.swift in Sources */,
+				2B1A53272BD6C13700E469DA /* KooraLiveUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B1A53182BD6C13600E469DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B1A52FF2BD6C13100E469DA /* KooraLive */;
+			targetProxy = 2B1A53172BD6C13600E469DA /* PBXContainerItemProxy */;
+		};
+		2B1A53222BD6C13700E469DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B1A52FF2BD6C13100E469DA /* KooraLive */;
+			targetProxy = 2B1A53212BD6C13700E469DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2B1A53092BD6C13100E469DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B1A530A2BD6C13100E469DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2B1A530E2BD6C13600E469DA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B1A530F2BD6C13600E469DA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B1A53282BD6C13700E469DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B1A53292BD6C13700E469DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B1A532B2BD6C13700E469DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KooraLive/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.KooraLive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B1A532C2BD6C13700E469DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KooraLive/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.KooraLive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2B1A532E2BD6C13700E469DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.KooraLiveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KooraLive.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KooraLive";
+			};
+			name = Debug;
+		};
+		2B1A532F2BD6C13700E469DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.KooraLiveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KooraLive.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KooraLive";
+			};
+			name = Release;
+		};
+		2B1A53312BD6C13700E469DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.KooraLiveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KooraLive;
+			};
+			name = Debug;
+		};
+		2B1A53322BD6C13700E469DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.KooraLiveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KooraLive;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B1A52FB2BD6C13000E469DA /* Build configuration list for PBXProject "KooraLive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B1A53282BD6C13700E469DA /* Debug */,
+				2B1A53292BD6C13700E469DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B1A532A2BD6C13700E469DA /* Build configuration list for PBXNativeTarget "KooraLive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B1A532B2BD6C13700E469DA /* Debug */,
+				2B1A532C2BD6C13700E469DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B1A532D2BD6C13700E469DA /* Build configuration list for PBXNativeTarget "KooraLiveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B1A532E2BD6C13700E469DA /* Debug */,
+				2B1A532F2BD6C13700E469DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B1A53302BD6C13700E469DA /* Build configuration list for PBXNativeTarget "KooraLiveUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B1A53312BD6C13700E469DA /* Debug */,
+				2B1A53322BD6C13700E469DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B1A52F82BD6C13000E469DA /* Project object */;
+}
