@@ -1,0 +1,6 @@
+framework module Pods_KooraLiveTests {
+  umbrella header "Pods-KooraLiveTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
