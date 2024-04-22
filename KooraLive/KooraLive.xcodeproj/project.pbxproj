@@ -7,136 +7,366 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B1A53042BD6C13100E469DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A53032BD6C13100E469DA /* AppDelegate.swift */; };
-		2B1A53062BD6C13100E469DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A53052BD6C13100E469DA /* SceneDelegate.swift */; };
-		2B1A53082BD6C13100E469DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A53072BD6C13100E469DA /* ViewController.swift */; };
-		2B1A530B2BD6C13100E469DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A53092BD6C13100E469DA /* Main.storyboard */; };
-		2B1A530D2BD6C13600E469DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A530C2BD6C13600E469DA /* Assets.xcassets */; };
-		2B1A53102BD6C13600E469DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1A530E2BD6C13600E469DA /* LaunchScreen.storyboard */; };
-		2B1A531B2BD6C13700E469DA /* KooraLiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A531A2BD6C13700E469DA /* KooraLiveTests.swift */; };
-		2B1A53252BD6C13700E469DA /* KooraLiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A53242BD6C13700E469DA /* KooraLiveUITests.swift */; };
-		2B1A53272BD6C13700E469DA /* KooraLiveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A53262BD6C13700E469DA /* KooraLiveUITestsLaunchTests.swift */; };
+		2B5D39C92BD6DEEB00738208 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D39C82BD6DEEB00738208 /* AppCoordinator.swift */; };
+		2B5D39CC2BD6E1E900738208 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D39CB2BD6E1E900738208 /* Constants.swift */; };
+		2B5D39CE2BD6E29200738208 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D39CD2BD6E29200738208 /* EndPoint.swift */; };
+		2B5D39D12BD6E57300738208 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D39D02BD6E57300738208 /* NetworkError.swift */; };
+		2B5D39D32BD6E5C400738208 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D39D22BD6E5C400738208 /* NetworkManger.swift */; };
+		2B5D39D92BD6F10300738208 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D39D82BD6F10300738208 /* RealmManager.swift */; };
+		2B5D39DD2BD70CBC00738208 /* MatchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D39DC2BD70CBC00738208 /* MatchCoordinator.swift */; };
+		2B5D39DF2BD70D8500738208 /* MatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D39DE2BD70D8500738208 /* MatchModel.swift */; };
+		2B5D39E12BD70D9700738208 /* MatchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D39E02BD70D9700738208 /* MatchUseCase.swift */; };
+		2B5D39E42BD70E5800738208 /* MatchEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D39E32BD70E5800738208 /* MatchEndPoint.swift */; };
+		2B5D39E62BD70E8F00738208 /* MatchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D39E52BD70E8F00738208 /* MatchProtocols.swift */; };
+		2B5D39E92BD70EA100738208 /* MatchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D39E82BD70EA100738208 /* MatchPresenter.swift */; };
+		2B5D39F22BD720C300738208 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D39F02BD720C300738208 /* MatchViewController.swift */; };
+		2B5D39F32BD720C300738208 /* MatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B5D39F12BD720C300738208 /* MatchViewController.xib */; };
+		2B5D39F52BD7216A00738208 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D39F42BD7216A00738208 /* SceneDelegate.swift */; };
+		2B9F34032BD5D7C000236EA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F34022BD5D7C000236EA6 /* AppDelegate.swift */; };
+		2B9F340C2BD5D7C500236EA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B9F340B2BD5D7C500236EA6 /* Assets.xcassets */; };
+		2B9F340F2BD5D7C600236EA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B9F340D2BD5D7C600236EA6 /* LaunchScreen.storyboard */; };
+		2B9F341A2BD5D7C600236EA6 /* KooraLiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F34192BD5D7C600236EA6 /* KooraLiveTests.swift */; };
+		2B9F34242BD5D7C600236EA6 /* KooraLiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F34232BD5D7C600236EA6 /* KooraLiveUITests.swift */; };
+		2B9F34262BD5D7C600236EA6 /* KooraLiveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F34252BD5D7C600236EA6 /* KooraLiveUITestsLaunchTests.swift */; };
+		41C35A2289166134972BF994 /* Pods_KooraLive_KooraLiveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0941C5C32F5105A1CC6E5EE /* Pods_KooraLive_KooraLiveUITests.framework */; };
+		85530645AF43CD7F58B89D40 /* Pods_KooraLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301FF9171B7BF29DCA611610 /* Pods_KooraLive.framework */; };
+		A270773D2D041BB67D5C2DBD /* Pods_KooraLiveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9542CA4BC20EA788DB33C29 /* Pods_KooraLiveTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2B1A53172BD6C13600E469DA /* PBXContainerItemProxy */ = {
+		2B9F34162BD5D7C600236EA6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2B1A52F82BD6C13000E469DA /* Project object */;
+			containerPortal = 2B9F33F72BD5D7BF00236EA6 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2B1A52FF2BD6C13100E469DA;
+			remoteGlobalIDString = 2B9F33FE2BD5D7C000236EA6;
 			remoteInfo = KooraLive;
 		};
-		2B1A53212BD6C13700E469DA /* PBXContainerItemProxy */ = {
+		2B9F34202BD5D7C600236EA6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2B1A52F82BD6C13000E469DA /* Project object */;
+			containerPortal = 2B9F33F72BD5D7BF00236EA6 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2B1A52FF2BD6C13100E469DA;
+			remoteGlobalIDString = 2B9F33FE2BD5D7C000236EA6;
 			remoteInfo = KooraLive;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2B1A53002BD6C13100E469DA /* KooraLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KooraLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B1A53032BD6C13100E469DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2B1A53052BD6C13100E469DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2B1A53072BD6C13100E469DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2B1A530A2BD6C13100E469DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2B1A530C2BD6C13600E469DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2B1A530F2BD6C13600E469DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2B1A53112BD6C13600E469DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2B1A53162BD6C13600E469DA /* KooraLiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KooraLiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B1A531A2BD6C13700E469DA /* KooraLiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KooraLiveTests.swift; sourceTree = "<group>"; };
-		2B1A53202BD6C13700E469DA /* KooraLiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KooraLiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B1A53242BD6C13700E469DA /* KooraLiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KooraLiveUITests.swift; sourceTree = "<group>"; };
-		2B1A53262BD6C13700E469DA /* KooraLiveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KooraLiveUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2B5D39C82BD6DEEB00738208 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		2B5D39CB2BD6E1E900738208 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2B5D39CD2BD6E29200738208 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		2B5D39D02BD6E57300738208 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		2B5D39D22BD6E5C400738208 /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
+		2B5D39D82BD6F10300738208 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		2B5D39DC2BD70CBC00738208 /* MatchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCoordinator.swift; sourceTree = "<group>"; };
+		2B5D39DE2BD70D8500738208 /* MatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchModel.swift; sourceTree = "<group>"; };
+		2B5D39E02BD70D9700738208 /* MatchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchUseCase.swift; sourceTree = "<group>"; };
+		2B5D39E32BD70E5800738208 /* MatchEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchEndPoint.swift; sourceTree = "<group>"; };
+		2B5D39E52BD70E8F00738208 /* MatchProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchProtocols.swift; sourceTree = "<group>"; };
+		2B5D39E82BD70EA100738208 /* MatchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPresenter.swift; sourceTree = "<group>"; };
+		2B5D39F02BD720C300738208 /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
+		2B5D39F12BD720C300738208 /* MatchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchViewController.xib; sourceTree = "<group>"; };
+		2B5D39F42BD7216A00738208 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2B9F33FF2BD5D7C000236EA6 /* KooraLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KooraLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B9F34022BD5D7C000236EA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B9F340B2BD5D7C500236EA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B9F340E2BD5D7C600236EA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B9F34102BD5D7C600236EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B9F34152BD5D7C600236EA6 /* KooraLiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KooraLiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B9F34192BD5D7C600236EA6 /* KooraLiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KooraLiveTests.swift; sourceTree = "<group>"; };
+		2B9F341F2BD5D7C600236EA6 /* KooraLiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KooraLiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B9F34232BD5D7C600236EA6 /* KooraLiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KooraLiveUITests.swift; sourceTree = "<group>"; };
+		2B9F34252BD5D7C600236EA6 /* KooraLiveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KooraLiveUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		301FF9171B7BF29DCA611610 /* Pods_KooraLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KooraLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6029BC03884300BCD0576C18 /* Pods-KooraLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KooraLive.debug.xcconfig"; path = "Target Support Files/Pods-KooraLive/Pods-KooraLive.debug.xcconfig"; sourceTree = "<group>"; };
+		8B1668FB32B885E16D7C4190 /* Pods-KooraLiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KooraLiveTests.debug.xcconfig"; path = "Target Support Files/Pods-KooraLiveTests/Pods-KooraLiveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8C7F26FCCB07B9F1C055498E /* Pods-KooraLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KooraLive.release.xcconfig"; path = "Target Support Files/Pods-KooraLive/Pods-KooraLive.release.xcconfig"; sourceTree = "<group>"; };
+		95C6C750CF7D82508F4A41D6 /* Pods-KooraLive-KooraLiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KooraLive-KooraLiveUITests.release.xcconfig"; path = "Target Support Files/Pods-KooraLive-KooraLiveUITests/Pods-KooraLive-KooraLiveUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B2EBB32AD3776166C00AF7BD /* Pods-KooraLiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KooraLiveTests.release.xcconfig"; path = "Target Support Files/Pods-KooraLiveTests/Pods-KooraLiveTests.release.xcconfig"; sourceTree = "<group>"; };
+		B9542CA4BC20EA788DB33C29 /* Pods_KooraLiveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KooraLiveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0941C5C32F5105A1CC6E5EE /* Pods_KooraLive_KooraLiveUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KooraLive_KooraLiveUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5E189C4B0F9FB3997342C1A /* Pods-KooraLive-KooraLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KooraLive-KooraLiveUITests.debug.xcconfig"; path = "Target Support Files/Pods-KooraLive-KooraLiveUITests/Pods-KooraLive-KooraLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2B1A52FD2BD6C13100E469DA /* Frameworks */ = {
+		2B9F33FC2BD5D7C000236EA6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85530645AF43CD7F58B89D40 /* Pods_KooraLive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2B1A53132BD6C13600E469DA /* Frameworks */ = {
+		2B9F34122BD5D7C600236EA6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A270773D2D041BB67D5C2DBD /* Pods_KooraLiveTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2B1A531D2BD6C13700E469DA /* Frameworks */ = {
+		2B9F341C2BD5D7C600236EA6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41C35A2289166134972BF994 /* Pods_KooraLive_KooraLiveUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2B1A52F72BD6C13000E469DA = {
+		2B5D39D42BD6E90D00738208 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2B1A53022BD6C13100E469DA /* KooraLive */,
-				2B1A53192BD6C13700E469DA /* KooraLiveTests */,
-				2B1A53232BD6C13700E469DA /* KooraLiveUITests */,
-				2B1A53012BD6C13100E469DA /* Products */,
+				2B5D39DE2BD70D8500738208 /* MatchModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B5D39D52BD6E91300738208 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B5D39F02BD720C300738208 /* MatchViewController.swift */,
+				2B5D39F12BD720C300738208 /* MatchViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B5D39D62BD6E91D00738208 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2B5D39E52BD70E8F00738208 /* MatchProtocols.swift */,
+				2B5D39E82BD70EA100738208 /* MatchPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2B5D39D72BD6E92800738208 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2B5D39DC2BD70CBC00738208 /* MatchCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2B5D39DA2BD709B800738208 /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				2B5D39E22BD70E4700738208 /* Network */,
+				2B5D39D72BD6E92800738208 /* Coordinator */,
+				2B5D39DB2BD709D900738208 /* UseCase */,
+				2B5D39D42BD6E90D00738208 /* Model */,
+				2B5D39D62BD6E91D00738208 /* Presenter */,
+				2B5D39D52BD6E91300738208 /* View */,
+			);
+			path = Match;
+			sourceTree = "<group>";
+		};
+		2B5D39DB2BD709D900738208 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				2B5D39E02BD70D9700738208 /* MatchUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		2B5D39E22BD70E4700738208 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2B5D39E32BD70E5800738208 /* MatchEndPoint.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2B9F33F62BD5D7BF00236EA6 = {
+			isa = PBXGroup;
+			children = (
+				2B9F34012BD5D7C000236EA6 /* KooraLive */,
+				2B9F34182BD5D7C600236EA6 /* KooraLiveTests */,
+				2B9F34222BD5D7C600236EA6 /* KooraLiveUITests */,
+				2B9F34002BD5D7C000236EA6 /* Products */,
+				72035DE002EC3280290054E4 /* Pods */,
+				E015C62C894EA07E1E333C4F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		2B1A53012BD6C13100E469DA /* Products */ = {
+		2B9F34002BD5D7C000236EA6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2B1A53002BD6C13100E469DA /* KooraLive.app */,
-				2B1A53162BD6C13600E469DA /* KooraLiveTests.xctest */,
-				2B1A53202BD6C13700E469DA /* KooraLiveUITests.xctest */,
+				2B9F33FF2BD5D7C000236EA6 /* KooraLive.app */,
+				2B9F34152BD5D7C600236EA6 /* KooraLiveTests.xctest */,
+				2B9F341F2BD5D7C600236EA6 /* KooraLiveUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2B1A53022BD6C13100E469DA /* KooraLive */ = {
+		2B9F34012BD5D7C000236EA6 /* KooraLive */ = {
 			isa = PBXGroup;
 			children = (
-				2B1A53032BD6C13100E469DA /* AppDelegate.swift */,
-				2B1A53052BD6C13100E469DA /* SceneDelegate.swift */,
-				2B1A53072BD6C13100E469DA /* ViewController.swift */,
-				2B1A53092BD6C13100E469DA /* Main.storyboard */,
-				2B1A530C2BD6C13600E469DA /* Assets.xcassets */,
-				2B1A530E2BD6C13600E469DA /* LaunchScreen.storyboard */,
-				2B1A53112BD6C13600E469DA /* Info.plist */,
+				2B9F34322BD5DBDF00236EA6 /* Foundation */,
+				2B9F343E2BD5DE5200236EA6 /* Modules */,
 			);
 			path = KooraLive;
 			sourceTree = "<group>";
 		};
-		2B1A53192BD6C13700E469DA /* KooraLiveTests */ = {
+		2B9F34182BD5D7C600236EA6 /* KooraLiveTests */ = {
 			isa = PBXGroup;
 			children = (
-				2B1A531A2BD6C13700E469DA /* KooraLiveTests.swift */,
+				2B9F34192BD5D7C600236EA6 /* KooraLiveTests.swift */,
 			);
 			path = KooraLiveTests;
 			sourceTree = "<group>";
 		};
-		2B1A53232BD6C13700E469DA /* KooraLiveUITests */ = {
+		2B9F34222BD5D7C600236EA6 /* KooraLiveUITests */ = {
 			isa = PBXGroup;
 			children = (
-				2B1A53242BD6C13700E469DA /* KooraLiveUITests.swift */,
-				2B1A53262BD6C13700E469DA /* KooraLiveUITestsLaunchTests.swift */,
+				2B9F34232BD5D7C600236EA6 /* KooraLiveUITests.swift */,
+				2B9F34252BD5D7C600236EA6 /* KooraLiveUITestsLaunchTests.swift */,
 			);
 			path = KooraLiveUITests;
+			sourceTree = "<group>";
+		};
+		2B9F34322BD5DBDF00236EA6 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				2B9F34352BD5DC9E00236EA6 /* App */,
+				2B9F34342BD5DC7800236EA6 /* Configuration */,
+				2B9F34372BD5DCFF00236EA6 /* Extensions */,
+				2B9F34362BD5DCDC00236EA6 /* Externals */,
+				2B9F343D2BD5DDA400236EA6 /* Resources */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		2B9F34332BD5DBF800236EA6 /* DataNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				2B5D39CB2BD6E1E900738208 /* Constants.swift */,
+				2B5D39CD2BD6E29200738208 /* EndPoint.swift */,
+				2B5D39D02BD6E57300738208 /* NetworkError.swift */,
+				2B5D39D22BD6E5C400738208 /* NetworkManger.swift */,
+			);
+			path = DataNetwork;
+			sourceTree = "<group>";
+		};
+		2B9F34342BD5DC7800236EA6 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				2B9F34102BD5D7C600236EA6 /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		2B9F34352BD5DC9E00236EA6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2B9F34022BD5D7C000236EA6 /* AppDelegate.swift */,
+				2B5D39F42BD7216A00738208 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2B9F34362BD5DCDC00236EA6 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				2B9F343C2BD5DD8100236EA6 /* Coordinator */,
+				2B9F34392BD5DD2700236EA6 /* DataPersistence */,
+				2B9F34332BD5DBF800236EA6 /* DataNetwork */,
+			);
+			path = Externals;
+			sourceTree = "<group>";
+		};
+		2B9F34372BD5DCFF00236EA6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2B9F34382BD5DD0D00236EA6 /* UI */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2B9F34382BD5DD0D00236EA6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2B9F34392BD5DD2700236EA6 /* DataPersistence */ = {
+			isa = PBXGroup;
+			children = (
+				2B9F343B2BD5DD5C00236EA6 /* Realm */,
+			);
+			path = DataPersistence;
+			sourceTree = "<group>";
+		};
+		2B9F343B2BD5DD5C00236EA6 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				2B5D39D82BD6F10300738208 /* RealmManager.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		2B9F343C2BD5DD8100236EA6 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2B5D39C82BD6DEEB00738208 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2B9F343D2BD5DDA400236EA6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B9F340B2BD5D7C500236EA6 /* Assets.xcassets */,
+				2B9F340D2BD5D7C600236EA6 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2B9F343E2BD5DE5200236EA6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				2B5D39DA2BD709B800738208 /* Match */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		72035DE002EC3280290054E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6029BC03884300BCD0576C18 /* Pods-KooraLive.debug.xcconfig */,
+				8C7F26FCCB07B9F1C055498E /* Pods-KooraLive.release.xcconfig */,
+				F5E189C4B0F9FB3997342C1A /* Pods-KooraLive-KooraLiveUITests.debug.xcconfig */,
+				95C6C750CF7D82508F4A41D6 /* Pods-KooraLive-KooraLiveUITests.release.xcconfig */,
+				8B1668FB32B885E16D7C4190 /* Pods-KooraLiveTests.debug.xcconfig */,
+				B2EBB32AD3776166C00AF7BD /* Pods-KooraLiveTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E015C62C894EA07E1E333C4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				301FF9171B7BF29DCA611610 /* Pods_KooraLive.framework */,
+				E0941C5C32F5105A1CC6E5EE /* Pods_KooraLive_KooraLiveUITests.framework */,
+				B9542CA4BC20EA788DB33C29 /* Pods_KooraLiveTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2B1A52FF2BD6C13100E469DA /* KooraLive */ = {
+		2B9F33FE2BD5D7C000236EA6 /* KooraLive */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2B1A532A2BD6C13700E469DA /* Build configuration list for PBXNativeTarget "KooraLive" */;
+			buildConfigurationList = 2B9F34292BD5D7C600236EA6 /* Build configuration list for PBXNativeTarget "KooraLive" */;
 			buildPhases = (
-				2B1A52FC2BD6C13100E469DA /* Sources */,
-				2B1A52FD2BD6C13100E469DA /* Frameworks */,
-				2B1A52FE2BD6C13100E469DA /* Resources */,
+				2D4CB82BDB78CB3D399D818F /* [CP] Check Pods Manifest.lock */,
+				2B9F33FB2BD5D7C000236EA6 /* Sources */,
+				2B9F33FC2BD5D7C000236EA6 /* Frameworks */,
+				2B9F33FD2BD5D7C000236EA6 /* Resources */,
+				AA52C00B9223F7741A1E9F1F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,69 +374,72 @@
 			);
 			name = KooraLive;
 			productName = KooraLive;
-			productReference = 2B1A53002BD6C13100E469DA /* KooraLive.app */;
+			productReference = 2B9F33FF2BD5D7C000236EA6 /* KooraLive.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2B1A53152BD6C13600E469DA /* KooraLiveTests */ = {
+		2B9F34142BD5D7C600236EA6 /* KooraLiveTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2B1A532D2BD6C13700E469DA /* Build configuration list for PBXNativeTarget "KooraLiveTests" */;
+			buildConfigurationList = 2B9F342C2BD5D7C600236EA6 /* Build configuration list for PBXNativeTarget "KooraLiveTests" */;
 			buildPhases = (
-				2B1A53122BD6C13600E469DA /* Sources */,
-				2B1A53132BD6C13600E469DA /* Frameworks */,
-				2B1A53142BD6C13600E469DA /* Resources */,
+				4AA07DB4A2047AE1B4659CB8 /* [CP] Check Pods Manifest.lock */,
+				2B9F34112BD5D7C600236EA6 /* Sources */,
+				2B9F34122BD5D7C600236EA6 /* Frameworks */,
+				2B9F34132BD5D7C600236EA6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2B1A53182BD6C13600E469DA /* PBXTargetDependency */,
+				2B9F34172BD5D7C600236EA6 /* PBXTargetDependency */,
 			);
 			name = KooraLiveTests;
 			productName = KooraLiveTests;
-			productReference = 2B1A53162BD6C13600E469DA /* KooraLiveTests.xctest */;
+			productReference = 2B9F34152BD5D7C600236EA6 /* KooraLiveTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2B1A531F2BD6C13700E469DA /* KooraLiveUITests */ = {
+		2B9F341E2BD5D7C600236EA6 /* KooraLiveUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2B1A53302BD6C13700E469DA /* Build configuration list for PBXNativeTarget "KooraLiveUITests" */;
+			buildConfigurationList = 2B9F342F2BD5D7C600236EA6 /* Build configuration list for PBXNativeTarget "KooraLiveUITests" */;
 			buildPhases = (
-				2B1A531C2BD6C13700E469DA /* Sources */,
-				2B1A531D2BD6C13700E469DA /* Frameworks */,
-				2B1A531E2BD6C13700E469DA /* Resources */,
+				6FDD7F06C8DBE743A1456D49 /* [CP] Check Pods Manifest.lock */,
+				2B9F341B2BD5D7C600236EA6 /* Sources */,
+				2B9F341C2BD5D7C600236EA6 /* Frameworks */,
+				2B9F341D2BD5D7C600236EA6 /* Resources */,
+				7EBF32423622682DF0012DEF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2B1A53222BD6C13700E469DA /* PBXTargetDependency */,
+				2B9F34212BD5D7C600236EA6 /* PBXTargetDependency */,
 			);
 			name = KooraLiveUITests;
 			productName = KooraLiveUITests;
-			productReference = 2B1A53202BD6C13700E469DA /* KooraLiveUITests.xctest */;
+			productReference = 2B9F341F2BD5D7C600236EA6 /* KooraLiveUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2B1A52F82BD6C13000E469DA /* Project object */ = {
+		2B9F33F72BD5D7BF00236EA6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					2B1A52FF2BD6C13100E469DA = {
+					2B9F33FE2BD5D7C000236EA6 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
-					2B1A53152BD6C13600E469DA = {
+					2B9F34142BD5D7C600236EA6 = {
 						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 2B1A52FF2BD6C13100E469DA;
+						TestTargetID = 2B9F33FE2BD5D7C000236EA6;
 					};
-					2B1A531F2BD6C13700E469DA = {
+					2B9F341E2BD5D7C600236EA6 = {
 						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 2B1A52FF2BD6C13100E469DA;
+						TestTargetID = 2B9F33FE2BD5D7C000236EA6;
 					};
 				};
 			};
-			buildConfigurationList = 2B1A52FB2BD6C13000E469DA /* Build configuration list for PBXProject "KooraLive" */;
+			buildConfigurationList = 2B9F33FA2BD5D7BF00236EA6 /* Build configuration list for PBXProject "KooraLive" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -214,37 +447,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 2B1A52F72BD6C13000E469DA;
-			productRefGroup = 2B1A53012BD6C13100E469DA /* Products */;
+			mainGroup = 2B9F33F62BD5D7BF00236EA6;
+			productRefGroup = 2B9F34002BD5D7C000236EA6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2B1A52FF2BD6C13100E469DA /* KooraLive */,
-				2B1A53152BD6C13600E469DA /* KooraLiveTests */,
-				2B1A531F2BD6C13700E469DA /* KooraLiveUITests */,
+				2B9F33FE2BD5D7C000236EA6 /* KooraLive */,
+				2B9F34142BD5D7C600236EA6 /* KooraLiveTests */,
+				2B9F341E2BD5D7C600236EA6 /* KooraLiveUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2B1A52FE2BD6C13100E469DA /* Resources */ = {
+		2B9F33FD2BD5D7C000236EA6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B1A53102BD6C13600E469DA /* LaunchScreen.storyboard in Resources */,
-				2B1A530D2BD6C13600E469DA /* Assets.xcassets in Resources */,
-				2B1A530B2BD6C13100E469DA /* Main.storyboard in Resources */,
+				2B9F340F2BD5D7C600236EA6 /* LaunchScreen.storyboard in Resources */,
+				2B9F340C2BD5D7C500236EA6 /* Assets.xcassets in Resources */,
+				2B5D39F32BD720C300738208 /* MatchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2B1A53142BD6C13600E469DA /* Resources */ = {
+		2B9F34132BD5D7C600236EA6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2B1A531E2BD6C13700E469DA /* Resources */ = {
+		2B9F341D2BD5D7C600236EA6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,62 +486,169 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2D4CB82BDB78CB3D399D818F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KooraLive-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4AA07DB4A2047AE1B4659CB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KooraLiveTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FDD7F06C8DBE743A1456D49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KooraLive-KooraLiveUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EBF32423622682DF0012DEF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KooraLive-KooraLiveUITests/Pods-KooraLive-KooraLiveUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KooraLive-KooraLiveUITests/Pods-KooraLive-KooraLiveUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KooraLive-KooraLiveUITests/Pods-KooraLive-KooraLiveUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA52C00B9223F7741A1E9F1F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KooraLive/Pods-KooraLive-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KooraLive/Pods-KooraLive-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KooraLive/Pods-KooraLive-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		2B1A52FC2BD6C13100E469DA /* Sources */ = {
+		2B9F33FB2BD5D7C000236EA6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B1A53082BD6C13100E469DA /* ViewController.swift in Sources */,
-				2B1A53042BD6C13100E469DA /* AppDelegate.swift in Sources */,
-				2B1A53062BD6C13100E469DA /* SceneDelegate.swift in Sources */,
+				2B5D39E42BD70E5800738208 /* MatchEndPoint.swift in Sources */,
+				2B5D39D32BD6E5C400738208 /* NetworkManger.swift in Sources */,
+				2B5D39F22BD720C300738208 /* MatchViewController.swift in Sources */,
+				2B5D39C92BD6DEEB00738208 /* AppCoordinator.swift in Sources */,
+				2B5D39DD2BD70CBC00738208 /* MatchCoordinator.swift in Sources */,
+				2B5D39F52BD7216A00738208 /* SceneDelegate.swift in Sources */,
+				2B9F34032BD5D7C000236EA6 /* AppDelegate.swift in Sources */,
+				2B5D39CE2BD6E29200738208 /* EndPoint.swift in Sources */,
+				2B5D39CC2BD6E1E900738208 /* Constants.swift in Sources */,
+				2B5D39D92BD6F10300738208 /* RealmManager.swift in Sources */,
+				2B5D39E12BD70D9700738208 /* MatchUseCase.swift in Sources */,
+				2B5D39E92BD70EA100738208 /* MatchPresenter.swift in Sources */,
+				2B5D39E62BD70E8F00738208 /* MatchProtocols.swift in Sources */,
+				2B5D39DF2BD70D8500738208 /* MatchModel.swift in Sources */,
+				2B5D39D12BD6E57300738208 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2B1A53122BD6C13600E469DA /* Sources */ = {
+		2B9F34112BD5D7C600236EA6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B1A531B2BD6C13700E469DA /* KooraLiveTests.swift in Sources */,
+				2B9F341A2BD5D7C600236EA6 /* KooraLiveTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2B1A531C2BD6C13700E469DA /* Sources */ = {
+		2B9F341B2BD5D7C600236EA6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B1A53252BD6C13700E469DA /* KooraLiveUITests.swift in Sources */,
-				2B1A53272BD6C13700E469DA /* KooraLiveUITestsLaunchTests.swift in Sources */,
+				2B9F34242BD5D7C600236EA6 /* KooraLiveUITests.swift in Sources */,
+				2B9F34262BD5D7C600236EA6 /* KooraLiveUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2B1A53182BD6C13600E469DA /* PBXTargetDependency */ = {
+		2B9F34172BD5D7C600236EA6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2B1A52FF2BD6C13100E469DA /* KooraLive */;
-			targetProxy = 2B1A53172BD6C13600E469DA /* PBXContainerItemProxy */;
+			target = 2B9F33FE2BD5D7C000236EA6 /* KooraLive */;
+			targetProxy = 2B9F34162BD5D7C600236EA6 /* PBXContainerItemProxy */;
 		};
-		2B1A53222BD6C13700E469DA /* PBXTargetDependency */ = {
+		2B9F34212BD5D7C600236EA6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2B1A52FF2BD6C13100E469DA /* KooraLive */;
-			targetProxy = 2B1A53212BD6C13700E469DA /* PBXContainerItemProxy */;
+			target = 2B9F33FE2BD5D7C000236EA6 /* KooraLive */;
+			targetProxy = 2B9F34202BD5D7C600236EA6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2B1A53092BD6C13100E469DA /* Main.storyboard */ = {
+		2B9F340D2BD5D7C600236EA6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2B1A530A2BD6C13100E469DA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2B1A530E2BD6C13600E469DA /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2B1A530F2BD6C13600E469DA /* Base */,
+				2B9F340E2BD5D7C600236EA6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -316,7 +656,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2B1A53282BD6C13700E469DA /* Debug */ = {
+		2B9F34272BD5D7C600236EA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -366,7 +706,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -376,7 +716,7 @@
 			};
 			name = Debug;
 		};
-		2B1A53292BD6C13700E469DA /* Release */ = {
+		2B9F34282BD5D7C600236EA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -420,7 +760,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -430,20 +770,24 @@
 			};
 			name = Release;
 		};
-		2B1A532B2BD6C13700E469DA /* Debug */ = {
+		2B9F342A2BD5D7C600236EA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6029BC03884300BCD0576C18 /* Pods-KooraLive.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KooraLive/Info.plist;
+				INFOPLIST_FILE = KooraLive/Foundation/Configuration/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Koora Live";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,20 +801,24 @@
 			};
 			name = Debug;
 		};
-		2B1A532C2BD6C13700E469DA /* Release */ = {
+		2B9F342B2BD5D7C600236EA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C7F26FCCB07B9F1C055498E /* Pods-KooraLive.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KooraLive/Info.plist;
+				INFOPLIST_FILE = KooraLive/Foundation/Configuration/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Koora Live";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,8 +832,9 @@
 			};
 			name = Release;
 		};
-		2B1A532E2BD6C13700E469DA /* Debug */ = {
+		2B9F342D2BD5D7C600236EA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B1668FB32B885E16D7C4190 /* Pods-KooraLiveTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -503,8 +852,9 @@
 			};
 			name = Debug;
 		};
-		2B1A532F2BD6C13700E469DA /* Release */ = {
+		2B9F342E2BD5D7C600236EA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2EBB32AD3776166C00AF7BD /* Pods-KooraLiveTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -522,8 +872,9 @@
 			};
 			name = Release;
 		};
-		2B1A53312BD6C13700E469DA /* Debug */ = {
+		2B9F34302BD5D7C600236EA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5E189C4B0F9FB3997342C1A /* Pods-KooraLive-KooraLiveUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,8 +890,9 @@
 			};
 			name = Debug;
 		};
-		2B1A53322BD6C13700E469DA /* Release */ = {
+		2B9F34312BD5D7C600236EA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95C6C750CF7D82508F4A41D6 /* Pods-KooraLive-KooraLiveUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -559,43 +911,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2B1A52FB2BD6C13000E469DA /* Build configuration list for PBXProject "KooraLive" */ = {
+		2B9F33FA2BD5D7BF00236EA6 /* Build configuration list for PBXProject "KooraLive" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2B1A53282BD6C13700E469DA /* Debug */,
-				2B1A53292BD6C13700E469DA /* Release */,
+				2B9F34272BD5D7C600236EA6 /* Debug */,
+				2B9F34282BD5D7C600236EA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2B1A532A2BD6C13700E469DA /* Build configuration list for PBXNativeTarget "KooraLive" */ = {
+		2B9F34292BD5D7C600236EA6 /* Build configuration list for PBXNativeTarget "KooraLive" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2B1A532B2BD6C13700E469DA /* Debug */,
-				2B1A532C2BD6C13700E469DA /* Release */,
+				2B9F342A2BD5D7C600236EA6 /* Debug */,
+				2B9F342B2BD5D7C600236EA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2B1A532D2BD6C13700E469DA /* Build configuration list for PBXNativeTarget "KooraLiveTests" */ = {
+		2B9F342C2BD5D7C600236EA6 /* Build configuration list for PBXNativeTarget "KooraLiveTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2B1A532E2BD6C13700E469DA /* Debug */,
-				2B1A532F2BD6C13700E469DA /* Release */,
+				2B9F342D2BD5D7C600236EA6 /* Debug */,
+				2B9F342E2BD5D7C600236EA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2B1A53302BD6C13700E469DA /* Build configuration list for PBXNativeTarget "KooraLiveUITests" */ = {
+		2B9F342F2BD5D7C600236EA6 /* Build configuration list for PBXNativeTarget "KooraLiveUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2B1A53312BD6C13700E469DA /* Debug */,
-				2B1A53322BD6C13700E469DA /* Release */,
+				2B9F34302BD5D7C600236EA6 /* Debug */,
+				2B9F34312BD5D7C600236EA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2B1A52F82BD6C13000E469DA /* Project object */;
+	rootObject = 2B9F33F72BD5D7BF00236EA6 /* Project object */;
 }
