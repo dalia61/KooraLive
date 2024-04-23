@@ -30,13 +30,12 @@ class MatchTableViewCell: UITableViewCell {
     func configure(_ viewModel: MatchCellViewModel) {
         team1Nm.text = viewModel.homeTeamName
         team2Nm.text = viewModel.awayTeamName
-        resulte.text = "\(viewModel.fullTime.homeTeam) \(viewModel.fullTime.awayTeam)"
+        resulte.text = "\(viewModel.fullTime.homeTeam ?? 0) - \(viewModel.fullTime.awayTeam ?? 0)"
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        let dateString = dateFormatter.string(from: viewModel.utcDate)
         
-        if let date = dateFormatter.date(from: dateString) {
+        if let date = dateFormatter.date(from: viewModel.utcDate) {
             dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
             let formattedDate = dateFormatter.string(from: date)
             // Set date and time labels
@@ -44,7 +43,8 @@ class MatchTableViewCell: UITableViewCell {
             self.time.text = formattedDate.components(separatedBy: " ")[1]
         } else {
             print("Invalid date string")
+            self.date.text = "Invalid date"
+            self.time.text = "Invalid time"
         }
     }
-    
 }

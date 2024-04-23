@@ -19,10 +19,10 @@ class MatchPresenter {
     }
 
     func fetchMatches() {
-        networkManager.callRequest([Match].self, endpoint: MatchEndPoint.match) { [weak self] result in
+        networkManager.callRequest(MatchModel.self, endpoint: MatchEndPoint.match) { [weak self] result in
             switch result {
             case let .success(response):
-                self?.output?.matchesResult(match: response)
+                self?.output?.matchesResult(match: response.matches ?? [])
             case let .failure(error):
                 print(error)
             }
