@@ -15,8 +15,9 @@ class MatchCoordinator: Coordinator {
     }
     
     func start() {
-        let matchPresenter = MatchPresenter(coordinator: self)
-        let matchViewController = MatchViewController(presenter: matchPresenter)
-        navigationController.setViewControllers([matchViewController], animated: false)
-    }
+            let matchPresenter = MatchPresenter(coordinator: self)
+            let matchViewController = MatchViewController(presenter: matchPresenter)
+            matchPresenter.output = matchViewController
+            navigationController.setViewControllers([matchViewController], animated: false)
+        }
 }
