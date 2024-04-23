@@ -20,7 +20,7 @@ protocol Endpoint: URLRequestConvertible {
 }
 
 extension Endpoint {
-    var baseURL: String { "https://api.football-data.org/v4/" }
+    var baseURL: String { "https://api.football-data.org/v2/" }
     
     var requestURL: URL { URL(string: baseURL + path)! }
     
