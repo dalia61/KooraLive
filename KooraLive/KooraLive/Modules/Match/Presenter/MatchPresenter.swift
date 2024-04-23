@@ -10,27 +10,25 @@ import Foundation
 class MatchPresenter: MatchInputProtocol {
     private let coordinator: MatchCoordinator
     
-    init(coordinator: MatchCoordinator) {
-        self.coordinator = coordinator
     weak var output: MatchOutputProtocol?
     
     private var remoteMatchesUseCase: MatchesUseCaseProtocol
     private var addMatchUseCase: AddMatchUseCaseProtocol
     
     private var matches: [MatchDay] = []
-
+    
     init(coordinator: MatchCoordinator) {
         self.coordinator = coordinator
         self.remoteMatchesUseCase = MatchesUseCase()
         self.addMatchUseCase = AddMatchUseCase()
     }
-
+    
     func viewDidLoad() {
         remoteMatchesUseCase.execute { [weak self] matches in
             self?.matches = matches
             self?.output?.reloadData()
         }
-
+        
     }
     
     func addMatch(section: Int, index: Int) {
@@ -62,5 +60,5 @@ class MatchPresenter: MatchInputProtocol {
                               fullTime: (match.score?.fullTime?.homeTeam ?? 0,
                                          match.score?.fullTime?.awayTeam ?? 0))
     }
-
 }
+
