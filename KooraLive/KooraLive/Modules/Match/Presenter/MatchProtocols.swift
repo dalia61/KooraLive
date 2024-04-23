@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+protocol MatchOutputProtocol: AnyObject {
+    func matchesResult(match: [Match])
+}
+
+protocol MatchInputProtocol: AnyObject {
+    func fetchMatches()
+}
