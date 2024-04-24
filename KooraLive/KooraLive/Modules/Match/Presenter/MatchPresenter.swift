@@ -8,36 +8,40 @@
 import Foundation
 
 class MatchPresenter: MatchInputProtocol {
+    var isShowingRemoteMatches: Bool = true
+
     private let coordinator: MatchCoordinator
     
     weak var output: MatchOutputProtocol?
     
-    private var remoteMatchesUseCase: MatchesUseCaseProtocol
+    private var remoteMatchesUseCase: RemoteMatchesUseCaseProtocol
+    private var localMatchesUseCase: LocalMatchesUseCaseProtocol
     private var addMatchUseCase: AddMatchUseCaseProtocol
-    
+    private var deleteMatchUseCase: DeleteMatchUseCaseProtocol
+    private var isMatchAddedUseCase: IsMatchAddedUseCaseProtocol
+
     private var matches: [MatchDay] = []
-    
+
     init(coordinator: MatchCoordinator) {
         self.coordinator = coordinator
-        self.remoteMatchesUseCase = MatchesUseCase()
+        self.remoteMatchesUseCase = RemoteMatchesUseCase()
+        self.localMatchesUseCase = LocalMatchesUseCase()
         self.addMatchUseCase = AddMatchUseCase()
+        self.deleteMatchUseCase = DeleteMatchUseCase()
+        self.isMatchAddedUseCase = IsMatchAddedUseCase()
     }
-    
-    func viewDidLoad() {
-        remoteMatchesUseCase.execute { [weak self] matches in
-            self?.matches = matches
-            self?.output?.reloadData()
-        }
-        
-    }
-    
+
     func addMatch(section: Int, index: Int) {
         let match = matchItem(section: section, row: index)
-        if true {
-            addMatchUseCase.execute(match: match)
+        if isMatchAddedUseCase.execute(matchId: match.id) {
+            deleteMatchUseCase.execute(matchId: match.id)
+            if !isShowingRemoteMatches {
+                getFavouriteMatches()
+            }
         } else {
             addMatchUseCase.execute(match: match)
         }
+        self.output?.reloadData()
     }
     
     func numberOfDays() -> Int {
@@ -45,7 +49,11 @@ class MatchPresenter: MatchInputProtocol {
     }
     
     func titleForSection(section: Int) -> String {
-        matches[section].date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let date = dateFormatter.date(from: matches[section].date)
+        dateFormatter.dateFormat = "MMM d, yyyy"
+        return dateFormatter.string(from: date!)
     }
     
     func numberOfMatches(section: Int) -> Int {
@@ -54,11 +62,28 @@ class MatchPresenter: MatchInputProtocol {
     
     func matchItem(section: Int, row: Int) -> MatchViewModel {
         let match = matches[section].matches[row]
-        return MatchViewModel(utcDate: match.utcDate ?? "",
-                              homeTeamName: match.homeTeam?.name ?? "",
-                              awayTeamName: match.awayTeam?.name ?? "",
-                              fullTime: (match.score?.fullTime?.homeTeam ?? 0,
-                                         match.score?.fullTime?.awayTeam ?? 0))
+        return MatchViewModel(id: match.id,
+                              isInFavorites: isMatchAddedUseCase.execute(matchId: match.id),
+                              utcDate: match.utcDate,
+                              homeTeamName: match.homeTeamName,
+                              awayTeamName: match.awayTeamName,
+                              awayTeamcrest: match.awayTeamcrest,
+                              homeTeamcrest: match.homeTeamcrest,
+                              fullTime: (match.homeTeamFullTime,
+                                         match.awayTeamFullTime))
     }
 }
 
+extension MatchPresenter {
+    func getRemoteMatches() {
+        remoteMatchesUseCase.execute { [weak self] matches in
+            self?.matches = matches
+            self?.output?.reloadData()
+        }
+    }
+    
+    func getFavouriteMatches() {
+        self.matches = localMatchesUseCase.execute()
+        self.output?.reloadData()
+    }
+}

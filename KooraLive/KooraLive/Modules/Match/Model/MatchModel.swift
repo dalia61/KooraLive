@@ -9,25 +9,23 @@ import Foundation
 
 struct MatchDay {
     let date: String
-    let matches: [Match]
+    let matches: [SavedMatchModel]
 }
 
 struct MatchModel: Codable {
-    let count: Int?
+    let filters: Filters?
     let competition: Competition?
     let matches: [Match]?
 }
 
 struct Competition: Codable {
     let id: Int?
-    let area: Area?
-    let name, code, plan: String?
-    let lastUpdated: String?
+    let name, code, type: String?
+    let emblem: String?
 }
 
-struct Area: Codable {
-    let id: Int?
-    let name: String?
+struct Filters: Codable {
+    let season: String?
 }
 
 struct Match: Codable {
@@ -43,6 +41,24 @@ struct Match: Codable {
     let score: Score?
     let homeTeam, awayTeam: Team?
     let referees: [Referee]?
+    let area: Area?
+    let competition: Competition?
+}
+
+struct Area: Codable {
+    let id: Int?
+    let name: String?
+    let code: String?
+    let flag: String?
+}
+
+struct Team: Codable {
+    let id: Int
+    let name: String?
+    let shortName: String?
+    let tla:String?
+    let crest: String?
+
 }
 
 struct Odds: Codable {
@@ -52,27 +68,22 @@ struct Odds: Codable {
 struct Referee: Codable {
     let id: Int?
     let name: String?
-    let role: String?
+    let type: String?
     let nationality: String?
 }
 
 struct Score: Codable {
     let winner: String?
     let duration: String?
-    let fullTime, halfTime, extraTime, penalties: ExtraTime?
+    let fullTime, halfTime: Time?
 }
 
-struct ExtraTime: Codable {
-    let homeTeam, awayTeam: Int?
+struct Time: Codable {
+    let home, away: Int?
 }
 
 struct Season: Codable {
     let id: Int?
     let startDate, endDate: String?
     let currentMatchday: Int?
-}
-
-struct Team: Codable {
-    let id: Int
-    let name: String
 }

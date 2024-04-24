@@ -12,11 +12,14 @@ protocol MatchOutputProtocol: AnyObject {
 }
 
 protocol MatchInputProtocol: AnyObject {
-    func viewDidLoad()
+    var isShowingRemoteMatches: Bool { get set }
+
     func addMatch(section: Int, index: Int)
     
     func numberOfDays() -> Int
     func titleForSection(section: Int) -> String
     func numberOfMatches(section: Int) -> Int
     func matchItem(section: Int, row: Int) -> MatchViewModel
+    func getRemoteMatches()
+    func getFavouriteMatches()
 }
