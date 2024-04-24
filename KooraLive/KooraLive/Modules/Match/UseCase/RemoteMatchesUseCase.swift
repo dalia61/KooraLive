@@ -34,8 +34,8 @@ struct RemoteMatchesUseCase: RemoteMatchesUseCaseProtocol {
                     savedMatch.awayTeamName = match.awayTeam?.name ?? ""
                     savedMatch.homeTeamcrest = match.homeTeam?.crest ?? ""
                     savedMatch.awayTeamcrest = match.awayTeam?.crest ?? ""
-                    savedMatch.homeTeamFullTime = match.score?.fullTime?.homeTeam ?? 0
-                    savedMatch.awayTeamFullTime = match.score?.fullTime?.awayTeam ?? 0
+                    savedMatch.homeTeamFullTime = match.score?.fullTime?.home ?? 0
+                    savedMatch.awayTeamFullTime = match.score?.fullTime?.away ?? 0
 
                     matches.append(savedMatch)
                 }
