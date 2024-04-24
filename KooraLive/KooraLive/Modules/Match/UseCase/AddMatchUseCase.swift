@@ -14,7 +14,7 @@ protocol AddMatchUseCaseProtocol {
 struct AddMatchUseCase: AddMatchUseCaseProtocol {
     func execute(match: MatchViewModel) {
         let savedMatch = SavedMatchModel()
-        
+        savedMatch.id = match.id
         savedMatch.utcDate = match.utcDate
         savedMatch.awayTeamName = match.awayTeamName
         savedMatch.homeTeamName = match.homeTeamName

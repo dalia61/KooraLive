@@ -29,6 +29,7 @@
 		2B9F341A2BD5D7C600236EA6 /* KooraLiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F34192BD5D7C600236EA6 /* KooraLiveTests.swift */; };
 		2B9F34242BD5D7C600236EA6 /* KooraLiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F34232BD5D7C600236EA6 /* KooraLiveUITests.swift */; };
 		2B9F34262BD5D7C600236EA6 /* KooraLiveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F34252BD5D7C600236EA6 /* KooraLiveUITestsLaunchTests.swift */; };
+		2BDD66A32BD88AC800AE27BD /* DeleteMatchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDD66A22BD88AC800AE27BD /* DeleteMatchUseCase.swift */; };
 		2BE641A52BD863DA00429636 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE641A32BD863DA00429636 /* MatchTableViewCell.swift */; };
 		2BE641A62BD863DA00429636 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE641A42BD863DA00429636 /* MatchTableViewCell.xib */; };
 		2BE641A82BD863FC00429636 /* UITableView+RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE641A72BD863FC00429636 /* UITableView+RegisterCell.swift */; };
@@ -82,6 +83,7 @@
 		2B9F341F2BD5D7C600236EA6 /* KooraLiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KooraLiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B9F34232BD5D7C600236EA6 /* KooraLiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KooraLiveUITests.swift; sourceTree = "<group>"; };
 		2B9F34252BD5D7C600236EA6 /* KooraLiveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KooraLiveUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2BDD66A22BD88AC800AE27BD /* DeleteMatchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMatchUseCase.swift; sourceTree = "<group>"; };
 		2BE641A32BD863DA00429636 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		2BE641A42BD863DA00429636 /* MatchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
 		2BE641A72BD863FC00429636 /* UITableView+RegisterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+RegisterCell.swift"; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				2B5D39E02BD70D9700738208 /* MatchesUseCase.swift */,
 				2B74B5682BD8462600D17F0D /* AddMatchUseCase.swift */,
+				2BDD66A22BD88AC800AE27BD /* DeleteMatchUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				2B5D39CE2BD6E29200738208 /* EndPoint.swift in Sources */,
 				2B5D39CC2BD6E1E900738208 /* Constants.swift in Sources */,
 				2B5D39D92BD6F10300738208 /* RealmManager.swift in Sources */,
+				2BDD66A32BD88AC800AE27BD /* DeleteMatchUseCase.swift in Sources */,
 				2B5D39E12BD70D9700738208 /* MatchesUseCase.swift in Sources */,
 				2BE641A52BD863DA00429636 /* MatchTableViewCell.swift in Sources */,
 				2BE641A82BD863FC00429636 /* UITableView+RegisterCell.swift in Sources */,

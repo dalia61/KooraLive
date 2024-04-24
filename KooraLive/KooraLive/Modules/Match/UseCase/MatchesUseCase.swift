@@ -9,6 +9,7 @@ import Foundation
 
 protocol MatchesUseCaseProtocol {
     func execute(completion: @escaping ([MatchDay]) -> Void)
+    func getFavourite() -> [SavedMatchModel]
 }
 
 struct MatchesUseCase: MatchesUseCaseProtocol {
@@ -26,23 +27,24 @@ struct MatchesUseCase: MatchesUseCaseProtocol {
             case let .success(response):
                 days = groupMatchesByDate(matches: response.matches ?? [])
                 completion(days)
-            case let .failure(error):
+            case .failure:
                 completion([])
             }
         }
     }
     
-    func groupMatchesByDate(matches: [Match]) -> [MatchDay] {
+    func getFavourite() -> [SavedMatchModel] {
+        return RealmManager.shared.retrieveAllDataForObject(SavedMatchModel.self)
+    }
+    
+    private func groupMatchesByDate(matches: [Match]) -> [MatchDay] {
         var matchDays: [MatchDay] = []
         var matchesByDate: [String: [Match]] = [:]
+
         for match in matches {
             if let date = match.utcDate?.prefix(10) {
                 let dateString = String(date)
-                if matchesByDate[dateString] == nil {
-                    matchesByDate[dateString] = [match]
-                } else {
-                    matchesByDate[dateString]?.append(match)
-                }
+                matchesByDate[dateString, default: []].append(match)
             }
         }
 

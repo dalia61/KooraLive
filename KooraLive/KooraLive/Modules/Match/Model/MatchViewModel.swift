@@ -9,6 +9,7 @@ import Foundation
 import RealmSwift
 
 struct MatchViewModel {
+    var id: Int
     var utcDate: String
     var homeTeamName: String
     var awayTeamName: String
@@ -16,12 +17,14 @@ struct MatchViewModel {
     var homeTeamcrest: String
     var fullTime: (homeTeam: Int?, awayTeam: Int?)
 
-    init(utcDate: String,
+    init(id: Int,
+         utcDate: String,
          homeTeamName: String,
          awayTeamName: String,
          awayTeamcrest: String,
          homeTeamcrest: String,
          fullTime: (homeTeam: Int?, awayTeam: Int?)) {
+        self.id = id
         self.utcDate = utcDate
         self.homeTeamName = homeTeamName
         self.awayTeamName = awayTeamName
@@ -35,6 +38,7 @@ struct MatchViewModel {
 }
 
 class SavedMatchModel: Object {
+    @objc dynamic var id: Int = 0
     @objc dynamic var utcDate: String = ""
     @objc dynamic var homeTeamName: String = ""
     @objc dynamic var awayTeamName: String = ""

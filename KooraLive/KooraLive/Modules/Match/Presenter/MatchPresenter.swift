@@ -14,6 +14,7 @@ class MatchPresenter: MatchInputProtocol {
     
     private var remoteMatchesUseCase: MatchesUseCaseProtocol
     private var addMatchUseCase: AddMatchUseCaseProtocol
+    private var deleteMatchUseCase: DeleteMatchUseCaseProtocol
     
     private var matches: [MatchDay] = []
     
@@ -21,6 +22,7 @@ class MatchPresenter: MatchInputProtocol {
         self.coordinator = coordinator
         self.remoteMatchesUseCase = MatchesUseCase()
         self.addMatchUseCase = AddMatchUseCase()
+        self.deleteMatchUseCase = DeleteMatchUseCase()
     }
     
     func viewDidLoad() {
@@ -33,10 +35,12 @@ class MatchPresenter: MatchInputProtocol {
     
     func addMatch(section: Int, index: Int) {
         let match = matchItem(section: section, row: index)
-        if true {
+        let isMatchSaved = false
+        
+        if !isMatchSaved {
             addMatchUseCase.execute(match: match)
         } else {
-            addMatchUseCase.execute(match: match)
+            deleteMatchUseCase.execute(matchId: index)
         }
     }
     
@@ -58,7 +62,7 @@ class MatchPresenter: MatchInputProtocol {
     
     func matchItem(section: Int, row: Int) -> MatchViewModel {
         let match = matches[section].matches[row]
-        return MatchViewModel(utcDate: match.utcDate ?? "",
+        return MatchViewModel(id: match.id ?? 0, utcDate: match.utcDate ?? "",
                               homeTeamName: match.homeTeam?.name ?? "",
                               awayTeamName: match.awayTeam?.name ?? "",
                               awayTeamcrest: match.awayTeam?.crest ?? "",
