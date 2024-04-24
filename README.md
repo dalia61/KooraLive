@@ -65,13 +65,17 @@ The app has two lists:
 Here are some screenshots from the app:
 
 - **Launch Screen**
-  ![Launch Screen](https://github.com/dalia61/KooraLive/assets/)
-  
-- **Matches List**
-  ![Matches List](https://github.com/dalia61/KooraLive/assets/)
+
+  <img src="https://github.com/dalia61/KooraLive/assets/70582993/e2a29752-b9eb-4afe-9c4e-a770e9952431" width="300" height="600">
+
+- **Schedule Matches List**
+
+   <img src="https://github.com/dalia61/KooraLive/assets/70582993/c51f936a-29e9-40dd-84d2-b72bed155e19" width="300" height="600">
 
 - **Favorite Matches List**
-  ![Favorite Matches List](https://github.com/dalia61/KooraLive/assets/)
+
+  <img src="https://github.com/dalia61/KooraLive/assets/70582993/8941b42f-5d91-4949-910e-cbd4cfda562d" width="300" height="600">
+
 
 
 ## Important to know 
