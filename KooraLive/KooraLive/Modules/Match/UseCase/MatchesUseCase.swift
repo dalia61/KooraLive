@@ -34,7 +34,6 @@ struct MatchesUseCase: MatchesUseCaseProtocol {
     
     func groupMatchesByDate(matches: [Match]) -> [MatchDay] {
         var matchDays: [MatchDay] = []
-
         var matchesByDate: [String: [Match]] = [:]
         for match in matches {
             if let date = match.utcDate?.prefix(10) {
@@ -62,7 +61,6 @@ struct MatchesUseCase: MatchesUseCaseProtocol {
                 return matchDay1.date < matchDay2.date
             }
         }
-
         return matchDays
     }
 }

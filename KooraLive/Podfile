@@ -8,6 +8,7 @@ target 'KooraLive' do
   # Pods for KooraLive
   pod 'Alamofire'
   pod 'RealmSwift'
+  pod 'Kingfisher'
 
   target 'KooraLiveTests' do
     inherit! :search_paths

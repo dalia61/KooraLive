@@ -75,4 +75,6 @@ struct Season: Codable {
 struct Team: Codable {
     let id: Int
     let name: String
+    let crest: String?
+
 }

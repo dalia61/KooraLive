@@ -45,7 +45,11 @@ class MatchPresenter: MatchInputProtocol {
     }
     
     func titleForSection(section: Int) -> String {
-        matches[section].date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let date = dateFormatter.date(from: matches[section].date)
+        dateFormatter.dateFormat = "MMM d, yyyy"
+        return dateFormatter.string(from: date!)
     }
     
     func numberOfMatches(section: Int) -> Int {
@@ -57,6 +61,8 @@ class MatchPresenter: MatchInputProtocol {
         return MatchViewModel(utcDate: match.utcDate ?? "",
                               homeTeamName: match.homeTeam?.name ?? "",
                               awayTeamName: match.awayTeam?.name ?? "",
+                              awayTeamcrest: match.awayTeam?.crest ?? "",
+                              homeTeamcrest: match.homeTeam?.crest ?? "",
                               fullTime: (match.score?.fullTime?.homeTeam ?? 0,
                                          match.score?.fullTime?.awayTeam ?? 0))
     }
