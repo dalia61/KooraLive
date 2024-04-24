@@ -9,7 +9,7 @@ import Foundation
 
 protocol MatchesUseCaseProtocol {
     func execute(completion: @escaping ([MatchDay]) -> Void)
-    func getFavourite() -> [SavedMatchModel]
+    func getFavourite(completion: @escaping ([SavedMatchModel]) -> Void)
 }
 
 struct MatchesUseCase: MatchesUseCaseProtocol {
@@ -33,8 +33,9 @@ struct MatchesUseCase: MatchesUseCaseProtocol {
         }
     }
     
-    func getFavourite() -> [SavedMatchModel] {
-        return RealmManager.shared.retrieveAllDataForObject(SavedMatchModel.self)
+    func getFavourite(completion: @escaping ([SavedMatchModel]) -> Void) {
+        let favorites = RealmManager.shared.retrieveAllDataForObject(SavedMatchModel.self)
+        completion(favorites)
     }
     
     private func groupMatchesByDate(matches: [Match]) -> [MatchDay] {

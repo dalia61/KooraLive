@@ -35,14 +35,18 @@ class MatchPresenter: MatchInputProtocol {
     
     func addMatch(section: Int, index: Int) {
         let match = matchItem(section: section, row: index)
-        let isMatchSaved = false
-        
-        if !isMatchSaved {
-            addMatchUseCase.execute(match: match)
+        if matchIsAlreadyFavorited(matchId: match.id) {
+            deleteMatchUseCase.execute(matchId: match.id)
         } else {
-            deleteMatchUseCase.execute(matchId: index)
+            addMatchUseCase.execute(match: match)
         }
     }
+
+    func matchIsAlreadyFavorited(matchId: Int) -> Bool {
+        let favorites = RealmManager.shared.retrieveAllDataForObject(SavedMatchModel.self)
+        return favorites.contains { $0.id == matchId }
+    }
+
     
     func numberOfDays() -> Int {
         matches.count
@@ -72,3 +76,18 @@ class MatchPresenter: MatchInputProtocol {
     }
 }
 
+extension MatchPresenter {
+    func getRemoteMatches() {
+        remoteMatchesUseCase.execute { [weak self] matches in
+            self?.matches = matches
+            self?.output?.reloadData()
+        }
+    }
+    
+    func getFavouriteMatches() {
+        remoteMatchesUseCase.getFavourite { [weak self] favoriteMatches in
+            //self?.matches.append(favoriteMatches)
+            self?.output?.reloadData()
+        }
+    }
+}

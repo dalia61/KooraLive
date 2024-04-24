@@ -19,4 +19,6 @@ protocol MatchInputProtocol: AnyObject {
     func titleForSection(section: Int) -> String
     func numberOfMatches(section: Int) -> Int
     func matchItem(section: Int, row: Int) -> MatchViewModel
+    func getRemoteMatches()
+    func getFavouriteMatches()
 }

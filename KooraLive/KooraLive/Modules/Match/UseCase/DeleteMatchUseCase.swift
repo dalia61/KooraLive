@@ -13,7 +13,7 @@ protocol DeleteMatchUseCaseProtocol {
 
 struct DeleteMatchUseCase: DeleteMatchUseCaseProtocol {
     func execute(matchId: Int) {
-        let idCell = NSPredicate(format: "%@", matchId)
-        RealmManager.shared.delete(SavedMatchModel.self, with: idCell)
+        let idPredicate = NSPredicate(format: "id == %d", matchId)
+        RealmManager.shared.delete(SavedMatchModel.self, with: idPredicate)
     }
 }

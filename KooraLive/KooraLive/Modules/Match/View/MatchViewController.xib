@@ -59,7 +59,7 @@
                                 <constraint firstItem="GUU-rB-iAP" firstAttribute="top" secondItem="XLW-ZG-Mrd" secondAttribute="top" id="5cD-ps-Qyd"/>
                                 <constraint firstItem="qdD-1i-dzO" firstAttribute="leading" secondItem="XLW-ZG-Mrd" secondAttribute="leading" id="BxM-iZ-KBT"/>
                                 <constraint firstAttribute="bottom" secondItem="qdD-1i-dzO" secondAttribute="bottom" id="FzP-Xt-18F"/>
-                                <constraint firstAttribute="height" constant="80" id="cfU-rL-OYT" customClass="NavigationHeight" customModule="ExpertSolutions" customModuleProvider="target"/>
+                                <constraint firstAttribute="height" constant="80" id="cfU-rL-OYT" customClass="NavigationHeight" customModule="KooraLive" customModuleProvider="target"/>
                                 <constraint firstItem="GUU-rB-iAP" firstAttribute="leading" secondItem="XLW-ZG-Mrd" secondAttribute="leading" constant="10" id="o5w-cK-MTp"/>
                                 <constraint firstItem="qdD-1i-dzO" firstAttribute="top" secondItem="GUU-rB-iAP" secondAttribute="bottom" id="qgW-qD-5j1"/>
                                 <constraint firstAttribute="trailing" secondItem="qdD-1i-dzO" secondAttribute="trailing" id="sac-nH-xao"/>
@@ -69,7 +69,7 @@
                     </subviews>
                     <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="120" id="QtX-C4-MOQ" customClass="NavigationHeightPlusStatusBar" customModule="ExpertSolutions" customModuleProvider="target"/>
+                        <constraint firstAttribute="height" constant="120" id="QtX-C4-MOQ" customClass="NavigationHeightPlusStatusBar" customModule="KooraLive" customModuleProvider="target"/>
                         <constraint firstItem="XLW-ZG-Mrd" firstAttribute="leading" secondItem="OGZ-wf-aR0" secondAttribute="leading" id="fvA-1s-GNS"/>
                         <constraint firstAttribute="trailing" secondItem="XLW-ZG-Mrd" secondAttribute="trailing" id="lwb-7U-yqH"/>
                         <constraint firstAttribute="bottom" secondItem="XLW-ZG-Mrd" secondAttribute="bottom" id="xxW-Zz-WxD"/>
@@ -111,6 +111,9 @@
                                     <real key="value" value="10"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="scheduleBtnTapped:" destination="-1" eventType="touchUpInside" id="vBQ-hM-t6F"/>
+                            </connections>
                         </button>
                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqh-fU-Px9">
                             <rect key="frame" x="196.66666666666663" y="0.0" width="176.33333333333337" height="40"/>
@@ -131,6 +134,9 @@
                                     <real key="value" value="10"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="favouriteBtnTapped:" destination="-1" eventType="touchUpInside" id="DB2-bU-heX"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>
