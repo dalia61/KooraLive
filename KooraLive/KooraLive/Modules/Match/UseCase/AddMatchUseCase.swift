@@ -20,7 +20,9 @@ struct AddMatchUseCase: AddMatchUseCaseProtocol {
         savedMatch.homeTeamName = match.homeTeamName
         savedMatch.homeTeamFullTime = match.fullTime.homeTeam ?? 0
         savedMatch.awayTeamFullTime = match.fullTime.awayTeam ?? 0
-
+        savedMatch.homeTeamcrest = match.homeTeamcrest
+        savedMatch.awayTeamcrest = match.awayTeamcrest
+        
         RealmManager.shared.add(savedMatch)
     }
 }
