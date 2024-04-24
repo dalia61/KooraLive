@@ -10,6 +10,7 @@ import Kingfisher
 
 class MatchTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var matchView: UIView!
     @IBOutlet weak var team1Image: UIImageView!
     @IBOutlet weak var team1Name: UILabel!
     @IBOutlet weak var date: UILabel!
@@ -17,10 +18,14 @@ class MatchTableViewCell: UITableViewCell {
     @IBOutlet weak var result: UILabel!
     @IBOutlet weak var team2Image: UIImageView!
     @IBOutlet weak var team2Name: UILabel!
+    @IBOutlet weak var isInFavoriteButton: UIButton!
     
+    var isInFavorites: Bool = false
     var didAddMatch: (() -> ())?
 
     override func awakeFromNib() {
+        self.matchView.layer.cornerRadius = 10
+        self.matchView.layer.masksToBounds = true
         super.awakeFromNib()
     }
     
@@ -32,6 +37,9 @@ class MatchTableViewCell: UITableViewCell {
     func configure(_ viewModel: MatchViewModel,
                    didAddMatch: @escaping () -> ()) {
         self.didAddMatch = didAddMatch
+        self.isInFavorites = viewModel.isInFavorites
+
+        isInFavoriteButton.setImage(UIImage(systemName: (isInFavorites ? "star.fill" : "star")), for: .normal)
         
         team1Name.text = viewModel.homeTeamName
         team2Name.text = viewModel.awayTeamName
@@ -69,6 +77,7 @@ class MatchTableViewCell: UITableViewCell {
     @IBAction func didPressAdd(_ sender: Any) {
         if let action = didAddMatch {
             action()
+            isInFavoriteButton.setImage(UIImage(systemName: (!isInFavorites ? "star.fill" : "star")), for: .normal)
         }
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 
 struct MatchDay {
     let date: String
-    let matches: [Match]
+    let matches: [SavedMatchModel]
 }
 
 struct MatchModel: Codable {

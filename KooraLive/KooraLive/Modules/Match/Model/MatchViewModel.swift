@@ -10,6 +10,7 @@ import RealmSwift
 
 struct MatchViewModel {
     var id: Int
+    var isInFavorites: Bool
     var utcDate: String
     var homeTeamName: String
     var awayTeamName: String
@@ -18,6 +19,7 @@ struct MatchViewModel {
     var fullTime: (homeTeam: Int?, awayTeam: Int?)
 
     init(id: Int,
+         isInFavorites: Bool,
          utcDate: String,
          homeTeamName: String,
          awayTeamName: String,
@@ -25,6 +27,7 @@ struct MatchViewModel {
          homeTeamcrest: String,
          fullTime: (homeTeam: Int?, awayTeam: Int?)) {
         self.id = id
+        self.isInFavorites = isInFavorites
         self.utcDate = utcDate
         self.homeTeamName = homeTeamName
         self.awayTeamName = awayTeamName

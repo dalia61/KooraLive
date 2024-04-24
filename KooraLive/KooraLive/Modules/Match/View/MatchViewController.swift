@@ -10,9 +10,8 @@ import UIKit
 class MatchViewController: UIViewController {
     
     private let presenter: MatchInputProtocol
-    private var isShowingRemoteMatches = true
     private var favoriteMatches: [SavedMatchModel] = []
-    
+
     @IBOutlet weak var matchesTableView: UITableView!
     @IBOutlet weak var favouriteBtn: UIButton!
     @IBOutlet weak var scheduleBtn: UIButton!
@@ -29,11 +28,17 @@ class MatchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        presenter.getRemoteMatches()
     }
     
     private func setupUI() {
+        [favouriteBtn,
+         scheduleBtn].map {
+            $0.layer.cornerRadius = 10
+            $0.layer.masksToBounds = true
+        }
+
         setupTableView()
-        presenter.viewDidLoad()
     }
     
     private func setupTableView() {
@@ -43,43 +48,42 @@ class MatchViewController: UIViewController {
     }
     
     @IBAction func scheduleBtnTapped(_ sender: Any) {
-        showRemoteMatches()
+        presenter.isShowingRemoteMatches = true
+        updateButtonAppearance()
+        presenter.getRemoteMatches()
     }
     
     @IBAction func favouriteBtnTapped(_ sender: Any) {
-        showFavouriteMatches()
-    }
-    
-    private func showFavouriteMatches() {
-        isShowingRemoteMatches = false
+        presenter.isShowingRemoteMatches = false
+        updateButtonAppearance()
         presenter.getFavouriteMatches()
-        updateButtonAppearance()
     }
-    
-    private func showRemoteMatches() {
-        isShowingRemoteMatches = true
-        presenter.getRemoteMatches()
-        updateButtonAppearance()
-    }
-    
+
     private func updateButtonAppearance() {
-        if isShowingRemoteMatches {
-            scheduleBtn.backgroundColor = UIColor(named: "#0B2740")
-            scheduleBtn.setTitleColor(UIColor(named: "#F2F2F2"), for: .normal)
-            favouriteBtn.backgroundColor = UIColor(named: "#F2F2F2")
-            favouriteBtn.setTitleColor(UIColor(named: "#0B2740"), for: .normal)
+        if presenter.isShowingRemoteMatches {
+            scheduleBtn.backgroundColor = UIColor(named: "AccentColor")
+            scheduleBtn.setTitleColor(UIColor(named: "grayCol"), for: .normal)
+            favouriteBtn.backgroundColor = UIColor(named: "grayCol")
+            favouriteBtn.setTitleColor(UIColor(named: "AccentColor"), for: .normal)
         } else {
-            scheduleBtn.backgroundColor = UIColor(named: "#F2F2F2")
-            scheduleBtn.setTitleColor(UIColor(named: "#0B2740"), for: .normal)
-            favouriteBtn.backgroundColor = UIColor(named: "#0B2740")
-            favouriteBtn.setTitleColor(UIColor(named: "#F2F2F2"), for: .normal)
+            favouriteBtn.backgroundColor = UIColor(named: "AccentColor")
+            favouriteBtn.setTitleColor(UIColor(named: "grayCol"), for: .normal)
+            scheduleBtn.backgroundColor = UIColor(named: "grayCol")
+            scheduleBtn.setTitleColor(UIColor(named: "AccentColor"), for: .normal)
         }
     }
 }
 
 extension MatchViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        presenter.numberOfDays()
+        let sectionsCount = presenter.numberOfDays()
+        if sectionsCount == 0 {
+            matchesTableView.setEmptyMessage("No matches found")
+        } else {
+            matchesTableView.restore()
+        }
+
+        return sectionsCount
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -88,17 +92,19 @@ extension MatchViewController: UITableViewDataSource, UITableViewDelegate {
         
         let headerLabel = UILabel()
         headerLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        headerLabel.textColor = UIColor(named: "#E2362C")
+        headerLabel.textColor = UIColor(named: "RedCol")
         headerLabel.text = presenter.titleForSection(section: section)
         headerLabel.translatesAutoresizingMaskIntoConstraints = false
         headerView.addSubview(headerLabel)
         
         NSLayoutConstraint.activate([
+            headerLabel.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 12),
             headerLabel.centerYAnchor.constraint(equalTo: headerView.centerYAnchor)
         ])
         
         return headerView
     }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presenter.numberOfMatches(section: section)
@@ -114,17 +120,12 @@ extension MatchViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 180
     }
 }
 
 extension MatchViewController: MatchOutputProtocol {
     func reloadData() {
-        if isShowingRemoteMatches {
-            matchesTableView.reloadData()
-        } else {
-            //favoriteMatches = presenter.getFavouriteMatches()
-            matchesTableView.reloadData()
-        }
+        matchesTableView.reloadData()
     }
 }

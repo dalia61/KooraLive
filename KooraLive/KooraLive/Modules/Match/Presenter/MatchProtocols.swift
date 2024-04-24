@@ -12,7 +12,8 @@ protocol MatchOutputProtocol: AnyObject {
 }
 
 protocol MatchInputProtocol: AnyObject {
-    func viewDidLoad()
+    var isShowingRemoteMatches: Bool { get set }
+
     func addMatch(section: Int, index: Int)
     
     func numberOfDays() -> Int

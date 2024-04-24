@@ -8,45 +8,41 @@
 import Foundation
 
 class MatchPresenter: MatchInputProtocol {
+    var isShowingRemoteMatches: Bool = true
+
     private let coordinator: MatchCoordinator
     
     weak var output: MatchOutputProtocol?
     
-    private var remoteMatchesUseCase: MatchesUseCaseProtocol
+    private var remoteMatchesUseCase: RemoteMatchesUseCaseProtocol
+    private var localMatchesUseCase: LocalMatchesUseCaseProtocol
     private var addMatchUseCase: AddMatchUseCaseProtocol
     private var deleteMatchUseCase: DeleteMatchUseCaseProtocol
-    
+    private var isMatchAddedUseCase: IsMatchAddedUseCaseProtocol
+
     private var matches: [MatchDay] = []
-    
+
     init(coordinator: MatchCoordinator) {
         self.coordinator = coordinator
-        self.remoteMatchesUseCase = MatchesUseCase()
+        self.remoteMatchesUseCase = RemoteMatchesUseCase()
+        self.localMatchesUseCase = LocalMatchesUseCase()
         self.addMatchUseCase = AddMatchUseCase()
         self.deleteMatchUseCase = DeleteMatchUseCase()
+        self.isMatchAddedUseCase = IsMatchAddedUseCase()
     }
-    
-    func viewDidLoad() {
-        remoteMatchesUseCase.execute { [weak self] matches in
-            self?.matches = matches
-            self?.output?.reloadData()
-        }
-        
-    }
-    
+
     func addMatch(section: Int, index: Int) {
         let match = matchItem(section: section, row: index)
-        if matchIsAlreadyFavorited(matchId: match.id) {
+        if isMatchAddedUseCase.execute(matchId: match.id) {
             deleteMatchUseCase.execute(matchId: match.id)
+            if !isShowingRemoteMatches {
+                getFavouriteMatches()
+            }
         } else {
             addMatchUseCase.execute(match: match)
         }
+        self.output?.reloadData()
     }
-
-    func matchIsAlreadyFavorited(matchId: Int) -> Bool {
-        let favorites = RealmManager.shared.retrieveAllDataForObject(SavedMatchModel.self)
-        return favorites.contains { $0.id == matchId }
-    }
-
     
     func numberOfDays() -> Int {
         matches.count
@@ -66,13 +62,15 @@ class MatchPresenter: MatchInputProtocol {
     
     func matchItem(section: Int, row: Int) -> MatchViewModel {
         let match = matches[section].matches[row]
-        return MatchViewModel(id: match.id ?? 0, utcDate: match.utcDate ?? "",
-                              homeTeamName: match.homeTeam?.name ?? "",
-                              awayTeamName: match.awayTeam?.name ?? "",
-                              awayTeamcrest: match.awayTeam?.crest ?? "",
-                              homeTeamcrest: match.homeTeam?.crest ?? "",
-                              fullTime: (match.score?.fullTime?.homeTeam ?? 0,
-                                         match.score?.fullTime?.awayTeam ?? 0))
+        return MatchViewModel(id: match.id,
+                              isInFavorites: isMatchAddedUseCase.execute(matchId: match.id),
+                              utcDate: match.utcDate,
+                              homeTeamName: match.homeTeamName,
+                              awayTeamName: match.awayTeamName,
+                              awayTeamcrest: match.awayTeamcrest,
+                              homeTeamcrest: match.homeTeamcrest,
+                              fullTime: (match.homeTeamFullTime,
+                                         match.awayTeamFullTime))
     }
 }
 
@@ -85,9 +83,7 @@ extension MatchPresenter {
     }
     
     func getFavouriteMatches() {
-        remoteMatchesUseCase.getFavourite { [weak self] favoriteMatches in
-            //self?.matches.append(favoriteMatches)
-            self?.output?.reloadData()
-        }
+        self.matches = localMatchesUseCase.execute()
+        self.output?.reloadData()
     }
 }
